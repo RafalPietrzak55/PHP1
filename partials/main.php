@@ -1,48 +1,15 @@
 <?php
 
-
-function addUser($userData)
-{
-
-    $usersData = file_get_contents('dataset/users.json');
-    $users = json_decode($usersData, true);
-
-
-    $users[] = $userData;
-
-
-    file_put_contents('dataset/users.json', json_encode($users));
-}
-
-
-function deleteUser($index)
-{
-
-    $usersData = file_get_contents('dataset/users.json');
-    $users = json_decode($usersData, true);
-
-
-    if (isset($users[$index])) {
-        unset($users[$index]);
-    }
-
-
-    $users = array_values($users);
-
-
-    file_put_contents('dataset/users.json', json_encode($users));
-}
-
+$usersData = file_get_contents('dataset/users.json');
+$users = json_decode($usersData, true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
     $name = $_POST['name'];
     $username = $_POST['username'];
     $email = $_POST['email'];
     $address = $_POST['address'];
     $phone = $_POST['phone'];
     $company = $_POST['company'];
-
 
     $newUser = array(
         'Name' => $name,
@@ -53,18 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'Company' => $company
     );
 
-
     addUser($newUser);
+
 
     header('Location: index.php');
     exit();
 }
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete'])) {
-
     $index = $_GET['delete'];
-
 
     deleteUser($index);
 
@@ -73,9 +37,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete'])) {
     exit();
 }
 
+function addUser($userData)
+{
+    $usersData = file_get_contents('dataset/users.json');
+    $users = json_decode($usersData, true);
 
-$usersData = file_get_contents('dataset/users.json');
-$users = json_decode($usersData, true);
+    $users[] = $userData;
+
+    file_put_contents('dataset/users.json', json_encode($users));
+}
+
+function deleteUser($index)
+{
+    $usersData = file_get_contents('dataset/users.json');
+    $users = json_decode($usersData, true);
+
+    if (isset($users[$index])) {
+        unset($users[$index]);
+    }
+
+    $users = array_values($users);
+
+    file_put_contents('dataset/users.json', json_encode($users));
+}
 
 ?>
 
@@ -83,7 +67,8 @@ $users = json_decode($usersData, true);
 <html lang="en">
 <head>
     <title>User Table</title>
-
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
 <div class="table-container">
@@ -106,7 +91,10 @@ $users = json_decode($usersData, true);
                 <td><?php echo $user['Phone']; ?></td>
                 <td><?php echo $user['Company']; ?></td>
                 <td>
-                    <a href="?delete=<?php echo $index; ?>" onclick="return confirm('Are you sure you want to delete this user?')">REMOVE BUTTON</a>
+                    <form action="" method="GET" class="delete-form">
+                        <input type="hidden" name="delete" value="<?php echo $index; ?>">
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">REMOVE BUTTON</button>
+                    </form>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -137,7 +125,6 @@ $users = json_decode($usersData, true);
         <button type="submit">SUBMIT BUTTON</button>
     </form>
 </div>
-
 
 </body>
 </html>
