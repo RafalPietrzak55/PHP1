@@ -106,6 +106,7 @@ function deleteUser($index)
 <div class="add-user-form">
     <h2>ADD USER</h2>
     <form action="" method="POST">
+        <div class="labels">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -123,8 +124,9 @@ function deleteUser($index)
 
         <label for="company">Company:</label>
         <input type="text" id="company" name="company" required>
+        </div>
 
-        <button class="btnUser" type="submit">SUBMIT BUTTON</button>
+        <button class="btnUser" type="submit">ADD BUTTON</button>
     </form>
 </div>
 
