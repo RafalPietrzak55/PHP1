@@ -1,8 +1,12 @@
 <style>
 
+
 body {
     background-color: #24292e;
+    overflow: auto;
 }
+
+
 .table-container {
     width: 57%;
 
@@ -40,6 +44,7 @@ body {
     margin-top: -20px;
     font-family: "Roboto Light";
 
+
 }
 .add-user-form .btnUser{
     width: 200px;
@@ -59,20 +64,18 @@ body {
 
 }
 
-tr:nth-child(odd) {
-    background-color: rgba(62, 255, 249, 0) !important;
-}
+
 
 .table-container table {
     border-collapse: collapse;
     background-color: #ffffff;
-    color: #ffffff;
+    color: white;
 }
 
 .table-container th {
     position: relative;
     font-size: 1.5em;
-    color: #a49a9a;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 50px;
@@ -81,17 +84,21 @@ tr:nth-child(odd) {
 .table-container td {
     position: relative;
     font-size: 1.1em;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 50px;
 }
+
+tr:nth-child(odd) {
+    background-color: #3cffef !important;
+}
 tr {
-    background-color: rgba(139, 62, 255, 0.38) !important;
-    color: white;
+    background-color: #3cb4ff !important;
+
 }
 th {
-    background-color: rgba(139, 62, 255, 0.38) !important;
+    background-color: #3cb4ff !important;
     color: white;
 }
 
