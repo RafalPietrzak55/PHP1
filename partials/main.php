@@ -84,6 +84,7 @@ function deleteUser($index)
         </tr>
         <?php foreach ($users as $index => $user): ?>
             <tr>
+
                 <td><?php echo $user['Name']; ?></td>
                 <td><?php echo $user['Username']; ?></td>
                 <td><a href="mailto:<?php echo $user['Email']; ?>"><?php echo $user['Email']; ?></a></td>
@@ -93,9 +94,10 @@ function deleteUser($index)
                 <td>
                     <form action="" method="GET" class="delete-form">
                         <input type="hidden" name="delete" value="<?php echo $index; ?>">
-                        <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">REMOVE BUTTON</button>
+                        <button class="delete-form-button" type="submit" onclick="return confirm('Are you sure you want to delete this user?')">REMOVE BUTTON</button>
                     </form>
                 </td>
+
             </tr>
         <?php endforeach; ?>
     </table>
@@ -122,7 +124,7 @@ function deleteUser($index)
         <label for="company">Company:</label>
         <input type="text" id="company" name="company" required>
 
-        <button type="submit">SUBMIT BUTTON</button>
+        <button class="btnUser" type="submit">SUBMIT BUTTON</button>
     </form>
 </div>
 

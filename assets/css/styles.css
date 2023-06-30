@@ -1,28 +1,86 @@
-
 <style>
 .table-container {
     width: 50%;
 }
 
+
+.table-container .delete-form .delete-form-button {
+    width: 100px;
+    height: 60px;
+    background: #ff3e3e;
+    color: white;
+    /*border: 1.5px solid #ffff;*/
+    outline none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: inherit;
+
+
+    }
+.add-user-form label{
+    position: relative;
+    font-size: 1.1em;
+    color: #491818;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+
+}
+.add-user-form .btnUser{
+    width: 100px;
+    height: 60px;
+    background: #3e68ff;
+    color: white;
+    /*border: 1.5px solid #ffff;*/
+    outline none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: inherit;
+
+
+}
+
+tr:nth-child(odd) {
+    background-color: #464545 !important;
+}
+
 .table-container table {
     border-collapse: collapse;
-    background-color: #0b0b2f;
+    background-color: #ffffff;
     color: #ffffff;
 }
 
-.table-container th,
-.table-container td {
-    padding: 10px;
-    border: 1px solid #2f2b2b;
+.table-container th {
+    position: relative;
+    font-size: 1.5em;
+    color: #a49a9a;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
 }
-th {
-    background-color: #0b0b2f;
+
+.table-container td {
+    position: relative;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+}
+tr {
+    background-color: #050505 !important;
     color: white;
 }
+th {
+    background-color: #050505 !important;
+    color: white;
+}
+
 th:first-child,
 td:first-child {
     width: 6%;
-
 }
 
 th:nth-child(2),
@@ -49,16 +107,10 @@ th:nth-child(6),
 td:nth-child(6) {
     width: 14%;
 }
+
 th:nth-child(7),
 td:nth-child(7) {
     width: 10%;
 }
 
-
-tr:nth-child(odd){background-color: #1b2960
-}
-
-
-
-}
 </style>
