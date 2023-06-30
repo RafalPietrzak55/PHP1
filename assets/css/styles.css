@@ -1,6 +1,9 @@
 <style>
+
+
 .table-container {
     width: 50%;
+
 }
 
 
@@ -18,13 +21,20 @@
 
 
     }
+.add-user-form h2 {
+    font-size: 2em;
+    margin-left: 600px;
+    font-family: "Bauhaus 93";
+    color: #3e68ff;
+}
 .add-user-form label{
     position: relative;
     font-size: 1.1em;
-    color: #491818;
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 30px;
+    margin-left: 5px;
+    font-family: inherit;
 
 }
 .add-user-form .btnUser{
@@ -43,7 +53,7 @@
 }
 
 tr:nth-child(odd) {
-    background-color: #464545 !important;
+    background-color: rgba(62, 255, 249, 0) !important;
 }
 
 .table-container table {
@@ -70,11 +80,11 @@ tr:nth-child(odd) {
     margin-left: 50px;
 }
 tr {
-    background-color: #050505 !important;
+    background-color: rgba(139, 62, 255, 0.38) !important;
     color: white;
 }
 th {
-    background-color: #050505 !important;
+    background-color: rgba(139, 62, 255, 0.38) !important;
     color: white;
 }
 
