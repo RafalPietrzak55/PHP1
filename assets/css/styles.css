@@ -23,17 +23,17 @@
     }
 .add-user-form h2 {
     font-size: 2em;
-    margin-left: 600px;
+    margin-left: 400px;
     font-family: "Bauhaus 93";
     color: #3e68ff;
 }
 .add-user-form label{
-    position: relative;
-    font-size: 1.1em;
+    position: fixed;
+    font-size: 1em;
     color: #000000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 5px;
+    margin-top: -10px;
     font-family: inherit;
 
 }
