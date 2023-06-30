@@ -1,6 +1,8 @@
 <style>
 
-
+body {
+    background-color: #24292e;
+}
 .table-container {
     width: 57%;
 
@@ -32,7 +34,7 @@
 .add-user-form .labels label{
     position: fixed;
     font-size: 1em;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     margin-top: -20px;
