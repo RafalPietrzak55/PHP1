@@ -1,14 +1,16 @@
+
 <style>
 
 
-body {
-    background-color: #24292e;
-    overflow: auto;
-}
+      body {
+          background-color: #24292e;
+          overflow: auto;
+      }
 
 
 .table-container {
     width: 57%;
+    border: black;
 
 }
 
@@ -19,11 +21,13 @@ body {
     background: #ff3e3e;
     color: white;
     /*border: 1.5px solid #ffff;*/
-    outline none;
+    outline: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.1em;
     font-family: inherit;
+    margin-top: 5px;
+    margin-left: 10px;
 
 
     }
@@ -52,7 +56,7 @@ body {
     background: #3e68ff;
     color: white;
     /*border: 1.5px solid #ffff;*/
-    outline none;
+    outline: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.1em;
@@ -67,13 +71,15 @@ body {
 
 
 .table-container table {
-    border-collapse: collapse;
+
     background-color: #ffffff;
     color: white;
+    border-collapse: collapse;
+
 }
 
 .table-container th {
-    position: relative;
+
     font-size: 1.5em;
     color: white;
     text-decoration: none;
@@ -81,25 +87,32 @@ body {
     margin-left: 50px;
 }
 
+
 .table-container td {
-    position: relative;
-    font-size: 1.1em;
+
+    font-size: 1em;
     color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 50px;
+    margin-left: 0px;
+    padding-left: 10px;
+
+
 }
 
 tr:nth-child(odd) {
-    background-color: #3cffef !important;
+    background-color: #357B97 ;
 }
 tr {
-    background-color: #3cb4ff !important;
+    background-color: #0092CC ;
+
 
 }
 th {
-    background-color: #3cb4ff !important;
+    background-color: #0092CC ;
     color: white;
+
+}
+td, th {
+    border: 1px solid #030303;
 }
 
 th:first-child,
@@ -138,3 +151,5 @@ td:nth-child(7) {
 }
 
 </style>
+
+

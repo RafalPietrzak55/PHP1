@@ -67,8 +67,6 @@ function deleteUser($index)
 <html lang="en">
 <head>
     <title>User Table</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <script src="assets/js/script.js"></script>
 </head>
 <body>
 <div class="table-container">
@@ -80,7 +78,7 @@ function deleteUser($index)
             <th>Address</th>
             <th>Phone</th>
             <th>Company</th>
-            <th>Action</th>
+            <th></th>
         </tr>
         <?php foreach ($users as $index => $user): ?>
             <tr>
